@@ -33,6 +33,7 @@ let cash_exchange = false;//是否消耗2元红包兑换200京豆，默认否
 const inviteCodes = [
   `eU9YaernNa539z_QwnpA1g@eU9YaLjmb6oj-WeGn3oT1w@ZE9XKaXLN6FOkxeHkAc@eU9YMK_FA6dihB21qwdM@YENmMrjtOKtioDCOnnMW1Wk@eU9YauSwYq1w9GvRzSBBhA`,
 ]
+$.authorCode = []
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
@@ -49,7 +50,7 @@ let allMessage = '';
     return;
   }
   await requireConfig()
-  await getAuthorShareCode();
+  // await getAuthorShareCode();
   await getAuthorShareCode2();
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
